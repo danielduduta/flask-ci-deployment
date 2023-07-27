@@ -7,9 +7,6 @@ resource "kubernetes_deployment" "deployment" {
   metadata {
     name = local.service_name
     namespace = var.namespace
-    annotations = {
-      "reloader.stakater.com/search" = true
-    }
   }
 
   spec {
